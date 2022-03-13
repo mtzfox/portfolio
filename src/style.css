@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  /* CSS HEX */
+--dark-sky-blue: #7EC1DEff;
+--space-cadet: #36304Bff;
+--english-violet: #5C4E6Cff;
+--dark-purple: #312A40ff;
+--magenta-crayola: #E9599Eff;
+
+/* Nebula */
+  --spun-pearl: #a09dab;
+  --provincial-pink: #fcf6f3;
+  --chardonnay: #f8c275;
+  --turquoise: #3fdffe;
+  --light-crimson: #f36f8c;
+  --mauve: #e7adfb;
+  --royal-purple: #7855a2;
+  --ebony-clay: #27273a;
+  --black-pearl: #1f2330;
+  --martinique: #3a3255;
+  --vulcan: #0f1420;
+  
+  /* Greys */
+  --silver-metallic: #b4b2bdff;
+  --silver-metallic-2: #a9a7b4ff;
+  --manatee: #9f9cabff;
+  --manatee-2: #9491a1ff;
+  --roman-silver: #898698ff;
+
+  /* Turquoise */
+  --blizzard-blue: #9aeefeff;
+  --sky-blue-crayola: #71e7feff;
+  --sky-blue-crayola-2: #3fdffeff;
+  --vivid-sky-blue: #20d9feff;
+  --vivid-sky-blue-2: #0bd5feff;
+
+  /* Crimson */
+  --orchid-pink: #fac6d2ff;
+  --mauvelous: #f7a1b3ff;
+  --ultra-red: #f36f8cff;
+  --brink-pink: #f15577ff;
+  --paradise-pink: #ee2f59ff;
+
+  /* Purples */
+  --wisteria: #b5a1ceff;
+  --purple-mountain-majesty: #a087c0ff;
+  --royal-purple: #7855a2ff;
+  --cyber-grape: #4f386bff;
+  --russian-violet: #3b2a50ff;
+
+  /* Blues */ 
+  --dark-blue-gray: #5f6c95ff;
+  --independence: #505a7cff;
+  --independence-2: #404864ff;
+  --space-cadet: #30364bff;
+  --raisin-black: #1f2330ff;
+}
+
+body {
+  background-color: var(--space-cadet);
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.name-title {
+  margin: 0;
+}
+
+.name-box {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  color: var(--silver-metallic);
+}
+.title-box {
+  font-family: 'Open Sans', sans-serf;
+  color: var(--royal-purple);
+}
+
+
+
+
+/* h1 {
+  color: var(--provincial-pink);
+}
+h3 {
+  color: var(--sky-blue-crayola-2);
+}
+
+h4 {
+  color: var(--royal-purple);
+}
+
+
+
+.navbar-fixed nav {
+  background-color: var(--raisin-black);
+  border-bottom: solid 1px var(--vulcan);
+  box-shadow: none;
+}
+
+.sidebar {
+  background-color: var(--independence-2);
+  justify-content: space-around;
+  align-content:flex-start;
+  border-right: solid 1px var(--vulcan);
+}
+
+.intro {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.main {
+  background-color: var(--space-cadet);
+}
+
+.about-me {
+  background-color: var(--spun-pearl);
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-me p {
+  text-align: justify;
+}
+
+.intro .btn-large {
+  background-color: var(--ultra-red);
+}
+.intro .btn-large:hover {
+  background-color: var(--brink-pink);
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.body-content {
+  display:flex;
+} */
