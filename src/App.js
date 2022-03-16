@@ -1,4 +1,4 @@
-import 'fomantic-ui-css/semantic.css';
+import './assets/fomantic/out/semantic.css';
 import { Container, Header } from 'semantic-ui-react';
 import './App.css';
 
