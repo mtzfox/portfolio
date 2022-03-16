@@ -1,3 +1,5 @@
+import 'fomantic-ui-css/semantic.css';
+import { Container, Header } from 'semantic-ui-react';
 import './App.css';
 
 function App() {
