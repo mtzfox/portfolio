@@ -35,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "fomantic-ui-css": "^2.8.8",
+    "semantic-ui-react": "^2.1.2"
   }
 }
