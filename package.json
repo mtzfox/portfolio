@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "@semantic-ui-react/css-patch"
   },
   "eslintConfig": {
     "extends": [
@@ -36,7 +37,6 @@
     ]
   },
   "devDependencies": {
-    "fomantic-ui-css": "^2.8.8",
     "semantic-ui-react": "^2.1.2"
   }
 }
