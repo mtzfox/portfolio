@@ -30,8 +30,8 @@ const HomepageHeading = ({ mobile }) => (
           marginTop: mobile ? '0.5em' : '0.5em',
         }}
       />
-      <Button primary size='huge'>
-        Get Started
+      <Button size='huge' inverted color='violet'>
+        About Me
         <Icon name='right arrow' />
       </Button>
     </Container>
