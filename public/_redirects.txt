@@ -9,3 +9,9 @@
   to = "https://publish.obsidian.md/mtzionfox/About+Me"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/obsidian"
+  to = "https://publish.obsidian.md/mtzionfox/About+Me"
+  status = 301
+  force = true
