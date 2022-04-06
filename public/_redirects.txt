@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://obsidian.mikecarlson.io"
+  to = "https://publish.obsidian.md/mtzionfox/About+Me"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://obsidian.mikecarlson.io"
+  to = "https://publish.obsidian.md/mtzionfox/About+Me"
+  status = 301
+  force = true
