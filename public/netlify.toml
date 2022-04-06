@@ -11,7 +11,7 @@
   force = true
 
 [[redirects]]
-  from = "/obsidian"
+  from = "https://mikecarlson.io/obsidian"
   to = "https://publish.obsidian.md/mtzionfox/About+Me"
   status = 301
   force = true
