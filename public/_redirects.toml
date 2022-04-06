@@ -1,4 +1,4 @@
 # Redirects from what the browser requests to what we serve
-/obsidian      https://publish.obsidian.md/mtzionfox/About+Me
-https://obsidian.mikecarlson.io  https://publish.obsidian.md/mtzionfox/About+Me
-http://obsidian.mikecarlson.io      https://publish.obsidian.md/mtzionfox/About+Me
+/obsidian      https://publish.obsidian.md/mtzionfox/About+Me  200
+https://obsidian.mikecarlson.io  https://publish.obsidian.md/mtzionfox/About+Me  200
+http://obsidian.mikecarlson.io      https://publish.obsidian.md/mtzionfox/About+Me  200
