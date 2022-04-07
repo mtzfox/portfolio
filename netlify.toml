@@ -10,7 +10,7 @@ package = "netlify-plugin-is-website-vulnerable"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "index.html"
   status = 200
   force = true
   signed = "ce84b391-533a-4c5d-bea3-b5be73bb4f15"
