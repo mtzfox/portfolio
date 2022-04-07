@@ -3,6 +3,6 @@ package = "netlify-plugin-is-website-vulnerable"
 
 [[redirects]]
   from = "publish.obsidian.md/mtzfox/*"
-  to = "obsidian.mikecarlson.io/:splat"
+  to = "https://mike-carlson.netlify.app/obsidian/:splat"
   status = 301
   force = true
