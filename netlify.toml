@@ -7,6 +7,6 @@ package = "netlify-plugin-is-website-vulnerable"
   status = 200
 
 [[redirects]]
-  from = "obsidian/*"
+  from = "/obsidian/*"
   to = "publish.obsidian.md/mtzfox/:splat"
   status = 200
