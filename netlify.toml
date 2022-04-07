@@ -9,7 +9,7 @@ package = "netlify-plugin-is-website-vulnerable"
   headers = {X-From = "Netlify"}
 
 [[redirects]]
-  from = "/mtz/*"
+  from = "/mtzfox/*"
   to = "/"
   status = 200
   force = true
