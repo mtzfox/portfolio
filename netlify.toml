@@ -3,6 +3,6 @@ package = "netlify-plugin-is-website-vulnerable"
 
 [[redirects]]
   from = "https://obsidian.mikecarlson.io/*"
-  to = "index.html"
+  to = "/%PUBLIC_URL%/index.html"
   status = 200
   force = true
