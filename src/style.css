@@ -57,7 +57,6 @@
 
 body {
   background-color: var(--space-cadet);
-  font-family: 'Open Sans', sans-serif;
 }
 .container {
   align-items: center;
@@ -70,14 +69,14 @@ body {
 
 .name-box {
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
   color: var(--silver-metallic);
 }
 .title-box {
-  font-family: 'Open Sans', sans-serf;
+  /* font-family: 'Open Sans', sans-serf; */
   color: var(--royal-purple);
 }
 
