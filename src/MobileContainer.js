@@ -2,15 +2,15 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
-  Button,
-  Container,
-  Icon,
-  Menu,
-  Segment,
+  // Button,
+  // Container,
+  // Icon,
+  // Menu,
+  // Segment,
   Sidebar,
 } from 'semantic-ui-react'
 
-import HomepageHeading from './HomepageHeading'
+// import HomepageHeading from './HomepageHeading'
 
 const { Media } = createMedia({
     breakpoints: {
@@ -28,12 +28,12 @@ class MobileContainer extends Component {
     handleToggle = () => this.setState({ sidebarOpened: true })
   
     render() {
-      const { children } = this.props
-      const { sidebarOpened } = this.state
+      // const { children } = this.props
+      // const { sidebarOpened } = this.state
   
       return (
         <Media as={Sidebar.Pushable} at='mobile'>
-          <Sidebar.Pushable>
+          {/* <Sidebar.Pushable>
             <Sidebar
               as={Menu}
               animation='overlay'
@@ -79,7 +79,7 @@ class MobileContainer extends Component {
   
               {children}
             </Sidebar.Pusher>
-          </Sidebar.Pushable>
+          </Sidebar.Pushable> */}
         </Media>
       )
     }

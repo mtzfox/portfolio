@@ -3,12 +3,15 @@ import React from 'react'
 import {
   Button,
   Container,
+  Divider,
+  Grid,
   Header,
-  Icon
+  Icon,
+  Segment
 } from 'semantic-ui-react'
 
-const handleClick = () => {
-  window.open("https://obsidian.mikecarlson.io");
+const handleClick = (url) => {
+  window.open(url);
 };
 
 const HomepageHeading = ({ mobile }) => (
@@ -20,13 +23,15 @@ const HomepageHeading = ({ mobile }) => (
         style={{
           fontSize: mobile ? '2em' : '4em',
           fontWeight: 'normal',
+          color: '#c0cdf3',
           marginBottom: 0,
           marginTop: mobile ? '1.5em' : '3em',
         }}
       />
+      
       <Header
         as='h2'
-        content='Software Engineer'
+        content='Software Engineer & UI Designer'
         inverted
         style={{
           fontSize: mobile ? '1.5em' : '1.7em',
@@ -34,10 +39,33 @@ const HomepageHeading = ({ mobile }) => (
           marginTop: mobile ? '0.5em' : '0.5em',
         }}
       />
-      <Button size='huge' inverted color='violet' onClick={handleClick}>
-        About Me
-        <Icon name='right arrow' />
+      <Divider placeholder />
+
+        <Segment color='black' inverted>
+    <Grid columns={2} stackable textAlign='center'>
+        <Grid.Column width={5}>
+        
+        <Button size='big' inverted color='violet' onClick={() => handleClick('http://obsidian.mikecarlson.io')}>
+        Obsidian
+        <Icon name='right lightbulb outline' />
       </Button>
+      
+        </Grid.Column>
+   
+
+        <Grid.Column width={5}>
+        <Button size='big' inverted color='purple' onClick={() => handleClick('https://github.com/mtzfox')}>
+        Github
+        <Icon name='right github' />
+      </Button>
+      
+        </Grid.Column>
+
+    </Grid>
+    </Segment>
+ 
+      
+      
     </Container>
   )
   

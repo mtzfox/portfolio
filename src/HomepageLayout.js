@@ -1,59 +1,54 @@
 
 import React from 'react'
 import {
-  Button,
-  Container,
-  Divider,
+  //Button,
+  // Container,
+  // Divider,
   Grid,
-  Header,
-  Image,
-  List,
-  Segment
+  //Header,
+  // Image,
+  // List,
+  //Segment
 } from 'semantic-ui-react'
 
 import ResponsiveContainer from './ResponsiveContainer'
 
-/* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
+
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p>
-          </Grid.Column>
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+  <style>
+      {`
+      html, body {
+        background-color: #252839 !important;
+      }
+      p {
+        align-content: center;
+        background-color: #495285;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 6em;
+      }
+      p > span {
+        opacity: 0.4;
+        text-align: center;
+      }
+    }
+    `}
+    </style>
+  <Grid container columns={3}>
+    <Grid.Column>
 
+    </Grid.Column>
+    <Grid.Column>
+ 
+    </Grid.Column>
+    <Grid.Column>
+     
+    </Grid.Column>
+  </Grid>
+{/*
     <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
@@ -111,9 +106,9 @@ const HomepageLayout = () => (
           I'm Still Quite Interested
         </Button>
       </Container>
-    </Segment>
+    </Segment>*/}
 
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
@@ -146,7 +141,7 @@ const HomepageLayout = () => (
           </Grid.Row>
         </Grid>
       </Container>
-    </Segment>
+    </Segment>  */}
   </ResponsiveContainer>
 )
 
