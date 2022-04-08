@@ -7,6 +7,10 @@ import {
   Icon
 } from 'semantic-ui-react'
 
+const handleClick = () => {
+  window.open("https://obsidian.mikecarlson.io");
+};
+
 const HomepageHeading = ({ mobile }) => (
     <Container text>
       <Header
@@ -30,7 +34,7 @@ const HomepageHeading = ({ mobile }) => (
           marginTop: mobile ? '0.5em' : '0.5em',
         }}
       />
-      <Button size='huge' inverted color='violet'>
+      <Button size='huge' inverted color='violet' onClick={handleClick}>
         About Me
         <Icon name='right arrow' />
       </Button>
