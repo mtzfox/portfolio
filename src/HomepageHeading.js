@@ -41,31 +41,30 @@ const HomepageHeading = ({ mobile }) => (
       />
       <Divider placeholder />
 
-        <Segment color='black' inverted>
-    <Grid columns={2} stackable textAlign='center'>
+      <Segment color='black' inverted>
+      
+      <Grid columns={2} stackable textAlign='center'>
         <Grid.Column width={5}>
-        
-        <Button size='big' inverted color='violet' onClick={() => handleClick('http://obsidian.mikecarlson.io')}>
-        Obsidian
+          <Button size='big' inverted color='violet' onClick={() => handleClick('http://obsidian.mikecarlson.io')}>
+          Obsidian
         <Icon name='right lightbulb outline' />
       </Button>
+      </Grid.Column>
       
-        </Grid.Column>
-   
-
-        <Grid.Column width={5}>
+      <Grid.Column width={5}>
         <Button size='big' inverted color='purple' onClick={() => handleClick('https://github.com/mtzfox')}>
         Github
         <Icon name='right github' />
-      </Button>
-      
-        </Grid.Column>
-
+        </Button>
+      </Grid.Column>
     </Grid>
+
     </Segment>
- 
-      
-      
+
+
+        
+
+
     </Container>
   )
   

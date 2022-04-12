@@ -1,14 +1,7 @@
 
 import React from 'react'
 import {
-  //Button,
-  // Container,
-  // Divider,
-  Grid,
-  //Header,
-  // Image,
-  // List,
-  //Segment
+  Container, Segment, Grid, Image, Header
 } from 'semantic-ui-react'
 
 import ResponsiveContainer from './ResponsiveContainer'
@@ -19,20 +12,11 @@ const HomepageLayout = () => (
   <style>
       {`
       html, body {
-        background-color: #252839 !important;
+        background-color: #252839;
       }
       p {
         align-content: center;
-        background-color: #495285;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 6em;
-      }
-      p > span {
-        opacity: 0.4;
-        text-align: center;
+        color: #c0cdf3;
       }
     }
     `}
@@ -48,6 +32,42 @@ const HomepageLayout = () => (
      
     </Grid.Column>
   </Grid>
+
+
+  <Segment style={{ margin: '5em', backgroundColor: '#1f2330' }}>
+    <Grid container celled="internally" textAlign="left" columns={2} style={{ margin: '0em' }}>
+      <Grid.Row textAlign="justified">
+        <Grid.Column width={10} style={{ margin: 0, paddingRight: 30 }}>
+          <Header as="h2" content="About Me" />
+
+          <Container fluid text="large">
+            <p>
+              I'm a Seattle-based software engineer, specializing in front-end
+              web development.
+            </p>
+
+            <p>
+              My professional interests are in JavaScript, React, CSS and design
+              for layout, user interface, and branding for the web.
+            </p>
+
+            <p>
+              Trained in commercial design, most of my career has been spent in
+              digital marketing services for the automotive industry.
+            </p>
+          </Container>
+        </Grid.Column>
+        <Grid.Column width={6} style={{  }}>
+          <Image
+            src="./assets/images/profile-square.jpg"
+            size="giant"
+            circular
+            fluid
+          />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+  </Segment>
 {/*
     <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
