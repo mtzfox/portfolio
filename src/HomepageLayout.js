@@ -39,11 +39,17 @@ const HomepageLayout = () => (
 
   <Segment className="about-me">
     <Grid container style={{ borderRadius: 5 }} celled="internally" textAlign="left" columns={2} divided inverted stackable>
-      <Grid.Row textAlign="justified" style={{ padding: 20 }}>
-        <Grid.Column mobile={16} tablet={8} computer={8} style={{ margin: 0, paddingRight: 30 }}>
-          <Header as='h2' inverted color='violet'>About Me</Header>
+      <Grid.Row textAlign="justified" style={{ padding: 10 }}>
+      <Grid.Column mobile={16} tablet={6} computer={5} style={{ padding: 10 }} >
+          <Image src='./assets/images/profile-square1.png' size='medium' circular
+            fluid
+            bordered centered />
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={10} computer={11} style={{ margin: 0, paddingRight: 30 }}>
+          
 
-          <Container fluid text="large">
+          <Container fluid text >
+          <Header as='h2' inverted color='violet'>About Me</Header>
             <p>
               I'm a Seattle-based software engineer, specializing in front-end
               web development.
@@ -60,11 +66,7 @@ const HomepageLayout = () => (
             </p>
           </Container>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={8} >
-          <Image src='./assets/images/profile-square1.jpg' size='giant' circular
-            fluid
-            bordered />
-        </Grid.Column>
+        
       </Grid.Row>
     </Grid>
   </Segment>
