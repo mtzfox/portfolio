@@ -38,7 +38,7 @@ const HomepageLayout = () => (
 
 
   <Segment className="about-me">
-    <Grid container celled="internally" textAlign="left" columns={2} divided inverted stackable>
+    <Grid container style={{ borderRadius: 5 }} celled="internally" textAlign="left" columns={2} divided inverted stackable>
       <Grid.Row textAlign="justified" style={{ padding: 20 }}>
         <Grid.Column mobile={16} tablet={8} computer={8} style={{ margin: 0, paddingRight: 30 }}>
           <Header as='h2' inverted color='violet'>About Me</Header>
@@ -61,7 +61,7 @@ const HomepageLayout = () => (
           </Container>
         </Grid.Column>
         <Grid.Column mobile={16} tablet={8} computer={8} >
-          <Image src='./assets/images/profile-square.jpg' size='giant' circular
+          <Image src='./assets/images/profile-square1.jpg' size='giant' circular
             fluid
             bordered />
         </Grid.Column>
