@@ -6,7 +6,6 @@ import {
 
 import ResponsiveContainer from './ResponsiveContainer'
 
-
 const HomepageLayout = () => (
   <ResponsiveContainer>
   <style>
@@ -18,27 +17,31 @@ const HomepageLayout = () => (
         align-content: center;
         color: #c0cdf3;
       }
-    }
+      .about-me > h2 {
+        color: #A087C0;
+      }
+      div.about-me { 
+        margin: 0em; 
+        background-color: #252839;
+      }
+      
+      .about-me > div {
+        background-color: black;
+        padding: 0;
+      }
+      .segment.about-me {
+        background-color: #252839;
+      }
+
     `}
     </style>
-  <Grid container columns={3}>
-    <Grid.Column>
-
-    </Grid.Column>
-    <Grid.Column>
- 
-    </Grid.Column>
-    <Grid.Column>
-     
-    </Grid.Column>
-  </Grid>
 
 
-  <Segment style={{ margin: '5em', backgroundColor: '#1f2330' }}>
-    <Grid container celled="internally" textAlign="left" columns={2} style={{ margin: '0em' }}>
-      <Grid.Row textAlign="justified">
-        <Grid.Column width={10} style={{ margin: 0, paddingRight: 30 }}>
-          <Header as="h2" content="About Me" />
+  <Segment className="about-me">
+    <Grid container celled="internally" textAlign="left" columns={2} divided inverted stackable>
+      <Grid.Row textAlign="justified" style={{ padding: 20 }}>
+        <Grid.Column mobile={16} tablet={8} computer={8} style={{ margin: 0, paddingRight: 30 }}>
+          <Header as='h2' inverted color='violet'>About Me</Header>
 
           <Container fluid text="large">
             <p>
@@ -57,13 +60,10 @@ const HomepageLayout = () => (
             </p>
           </Container>
         </Grid.Column>
-        <Grid.Column width={6} style={{  }}>
-          <Image
-            src="./assets/images/profile-square.jpg"
-            size="giant"
-            circular
+        <Grid.Column mobile={16} tablet={8} computer={8} >
+          <Image src='./assets/images/profile-square.jpg' size='giant' circular
             fluid
-          />
+            bordered />
         </Grid.Column>
       </Grid.Row>
     </Grid>
