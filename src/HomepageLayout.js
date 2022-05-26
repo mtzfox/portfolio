@@ -1,10 +1,14 @@
 
 import React from 'react'
 import {
-  Container, Segment, Grid, Image, Header
+  Container, Segment, Grid, Image, Header, Icon, List
 } from 'semantic-ui-react'
 
 import ResponsiveContainer from './ResponsiveContainer'
+
+const handleClick = (url) => {
+  window.open(url);
+};
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
@@ -13,24 +17,73 @@ const HomepageLayout = () => (
       html, body {
         background-color: #252839;
       }
+      h1 {
+        font-s
+      }
       p {
         align-content: center;
         color: #c0cdf3;
       }
-      .about-me > h2 {
+      a {
+        color: #82aaff;
+        font-weight: 600;
+      }
+      .about-me > h1 {
         color: #A087C0;
       }
       div.about-me { 
         margin: 0em; 
         background-color: #252839;
       }
-      
+      div.about-text {
+        margin: 3rem 0;
+      }
+      .profile-image {
+        border: 3px solid #c0cdf3; 
+        position: absolute;
+        z-index: 1;
+        top: -4.5rem;
+      }
+      .profile-skills {
+        background-color: transparent;
+      }
+      .profile-skills .segments .segment {
+        background-color: #3a325577;
+      }
+      .profile-skills h3.ui.header {
+        margin-bottom: 0;
+      }
+      .profile-skills .list.skill-list {
+        margin: 0.25rem 0 0 0rem;
+        text-align: center;
+      }
+      .profile-skills .skill-list > .item {
+        display: inline-block;
+        list-style: none;
+        line-height: 1.3;
+      }
+      ul.ui.horizontal.bulleted.list li::before, 
+      .ui.horizontal.bulleted.list > .item::before {
+        color: #A087C0;
+      }
+      .about-text p {
+        font-size: 1.2em;
+        font-weight: 600;
+        word-break: unset;
+        hyphens: none;
+      }
       .about-me > div {
-        background-color: black;
+        background-color: #0f1420;
         padding: 0;
       }
+      
       .segment.about-me {
+        padding: 0rem;
+        margin: 8vw;
         background-color: #252839;
+      }
+      .segment p {
+        font-size: 1.3em;
       }
 
     `}
@@ -38,18 +91,14 @@ const HomepageLayout = () => (
 
 
   <Segment className="about-me">
-    <Grid container style={{ borderRadius: 5 }} celled="internally" textAlign="left" columns={2} divided inverted stackable>
+    <Grid style={{ borderRadius: 5 }} container columns={2} inverted stackable>
       <Grid.Row textAlign="justified" style={{ padding: 10 }}>
-      <Grid.Column mobile={16} tablet={6} computer={5} style={{ padding: 10 }} >
-          <Image src='./assets/images/profile-square1.png' size='medium' circular
-            fluid
-            bordered centered />
-        </Grid.Column>
-        <Grid.Column mobile={16} tablet={10} computer={11} style={{ margin: 0, paddingRight: 30 }}>
+      
+      <Grid.Column mobile={16} tablet={10} computer={10} className='about-column' padded>
           
 
-          <Container fluid text >
-          <Header as='h2' inverted color='violet'>About Me</Header>
+          <Container fluid text textAlign='left' className='about-text' >
+            <Header as='h1' inverted color='violet' style={{ fontSize:'3em' }}>About Me</Header>
             <p>
               I'm a Seattle-based software engineer, specializing in front-end
               web development.
@@ -66,104 +115,75 @@ const HomepageLayout = () => (
             </p>
           </Container>
         </Grid.Column>
-        
+        <Grid.Column mobile={16} tablet={6} computer={6} style={{ padding: 10 }} className='profile-skills' >
+  
+        <Segment.Group raised>
+   
+          <Segment size='small' style={{ height: 70 }} inverted >
+            <Image src='./assets/images/profile-square1.png' size='small' className='profile-image' circular
+            centered />
+          </Segment>
+          <Segment inverted style={{ paddingTop: 50 }} textAlign='center' >
+            <Header as='h3'>Skills</Header>
+            <List className='skill-list' bulleted horizontal as='ul'>
+              <List.Item>HTML/CSS</List.Item>
+              <List.Item>Less/Sass</List.Item>
+              <List.Item>JavaScript ES6</List.Item>
+            </List>
+            <List className='skill-list' bulleted horizontal>
+              <List.Item>React</List.Item>
+              <List.Item>Bootstrap</List.Item>
+              <List.Item>Semantic UI</List.Item>
+            </List>
+            <List className='skill-list' bulleted horizontal>
+              <List.Item>UI Design</List.Item>
+              <List.Item>Photoshop</List.Item>
+              <List.Item>VS Code</List.Item>
+            </List>
+            <List className='skill-list' bulleted horizontal>
+              <List.Item>Git</List.Item>
+              <List.Item>Jest/TDD</List.Item>
+
+              <List.Item>Scrum</List.Item>
+            </List>
+            <Segment.Inline><Icon name='window minimize outline' color='purple'></Icon></Segment.Inline>
+            
+            
+            <Header as='h3'>Work Experience</Header>
+            <List className='skill-list' bulleted horizontal as='ul'>
+              <List.Item><List.Content as='a' onClick={() => handleClick('https://www.linkedin.com/in/mike-carlson-seattle/')}>Sincro Digital</List.Content></List.Item>
+              <List.Item><List.Content as='a' onClick={() => handleClick('https://www.linkedin.com/in/mike-carlson-seattle/')}>CDK Global</List.Content></List.Item>
+              <List.Item><List.Content as='a' onClick={() => handleClick('https://www.linkedin.com/in/mike-carlson-seattle/')}>The Cobalt Group</List.Content></List.Item>
+            </List>
+
+            <Segment.Inline><Icon name='window minimize outline' color='purple'></Icon></Segment.Inline>
+
+            <Header as='h3'>Education</Header>
+            <p>Associates of Applied Arts, 
+              <br />Interactive Media Design</p>
+          </Segment>
+        </Segment.Group>
+
+      </Grid.Column>
       </Grid.Row>
     </Grid>
   </Segment>
-{/*
-    <Segment style={{ padding: '0em' }} vertical>
-      <Grid celled='internally' columns='equal' stackable>
-        <Grid.Row textAlign='center'>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
 
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
-        </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
-        </p>
-        <Button as='a' size='large'>
-          Read More
-        </Button>
 
-        <Divider
-          as='h4'
-          className='header'
-          horizontal
-          style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-        >
-          <a href='https://mikecarlson.io'>Case Studies</a>
-        </Divider>
-
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Did We Tell You About Our Bananas?
-        </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-          it's really true. It took years of gene splicing and combinatory DNA research, but our
-          bananas can really dance.
-        </p>
-        <Button as='a' size='large'>
-          I'm Still Quite Interested
-        </Button>
-      </Container>
-    </Segment>*/}
-
-    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
+  <Segment inverted vertical centered style={{ padding: '5em 0em' }}>
       <Container>
-        <Grid divided inverted stackable>
+        <Grid inverted textAlign='center'>
           <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
+            <Grid.Column width={12}>
               <Header as='h4' inverted>
-                Footer Header
+              Ⓒ Copyright 2022 Mike Carlson. All rights reserved. 
               </Header>
-              <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Container>
-    </Segment>  */}
+    </Segment>
+
   </ResponsiveContainer>
 )
 

@@ -15,7 +15,7 @@ const handleClick = (url) => {
 };
 
 const HomepageHeading = ({ mobile }) => (
-    <Container text>
+    <Container text mobile={8} tablet={6} computer={6}>
       <Header
         as='h1'
         content='Mike Carlson'
@@ -43,18 +43,24 @@ const HomepageHeading = ({ mobile }) => (
 
       <Segment color='black' inverted>
       
-      <Grid columns={2} stackable textAlign='center'>
-        <Grid.Column width={5}>
+      <Grid columns={3} mobile={16} tablet={12} computer={12} stackable textAlign='center'>
+        <Grid.Column >
           <Button size='big' inverted color='violet' onClick={() => handleClick('http://obsidian.mikecarlson.io')}>
           Obsidian
         <Icon name='right lightbulb outline' />
       </Button>
       </Grid.Column>
       
-      <Grid.Column width={5}>
+      <Grid.Column>
         <Button size='big' inverted color='purple' onClick={() => handleClick('https://github.com/mtzfox')}>
         Github
         <Icon name='right github' />
+        </Button>
+      </Grid.Column>
+      <Grid.Column>
+        <Button size='big' inverted color='blue' onClick={() => handleClick('https://www.linkedin.com/in/mike-carlson-seattle/')}>
+        LinkedIn
+        <Icon name='right linkedin' />
         </Button>
       </Grid.Column>
     </Grid>
