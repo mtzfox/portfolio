@@ -45,20 +45,20 @@ const HomepageHeading = ({ mobile }) => (
       
       <Grid columns={3} mobile={16} tablet={12} computer={12} stackable textAlign='center'>
         <Grid.Column >
-          <Button size='big' inverted color='violet' onClick={() => handleClick('http://obsidian.mikecarlson.io')}>
+          <Button size='big' inverted color='violet' rel={'noopener noreferrer'} onClick={() => handleClick('https://obsidian.mikecarlson.io')}>
           Obsidian
         <Icon name='right lightbulb outline' />
       </Button>
       </Grid.Column>
       
       <Grid.Column>
-        <Button size='big' inverted color='purple' onClick={() => handleClick('https://github.com/mtzfox')}>
+        <Button size='big' inverted color='purple' rel={'noopener noreferrer'} onClick={() => handleClick('https://github.com/mtzfox')}>
         Github
         <Icon name='right github' />
         </Button>
       </Grid.Column>
       <Grid.Column>
-        <Button size='big' inverted color='blue' onClick={() => handleClick('https://www.linkedin.com/in/mike-carlson-seattle/')}>
+        <Button size='big' inverted color='blue' rel={'noopener noreferrer'} onClick={() => handleClick('https://www.linkedin.com/in/mike-carlson-seattle/')}>
         LinkedIn
         <Icon name='right linkedin' />
         </Button>
