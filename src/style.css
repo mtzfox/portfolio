@@ -80,7 +80,10 @@ body {
   color: var(--royal-purple);
 }
 
-
+.projects {
+  background-color: var(--raisin-black);
+  color: var(--silver-metallic);
+}
 
 
 /* h1 {
