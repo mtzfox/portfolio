@@ -5,6 +5,7 @@ import {
 } from 'semantic-ui-react'
 
 import ResponsiveContainer from './ResponsiveContainer'
+import Projects from './Projects';
 
 const handleClick = (url) => {
   window.open(url);
@@ -90,6 +91,8 @@ const HomepageLayout = () => (
     </style>
 
 
+  
+
   <Segment className="about-me">
     <Grid style={{ borderRadius: 5 }} container columns={2} inverted stackable>
       <Grid.Row textAlign="justified" style={{ padding: 10 }}>
@@ -168,6 +171,9 @@ const HomepageLayout = () => (
       </Grid.Row>
     </Grid>
   </Segment>
+
+
+  <Projects />
 
 
   <Segment inverted vertical centered style={{ padding: '5em 0em' }}>
