@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Image } from 'semantic-ui-react'
 
-const cryptoImg = './assets/images/crypto-app.png';
+const cryptoImg = './public/assets/images/crypto-app.png'
 
 const ProjectGrid = () => (
     <Grid>
