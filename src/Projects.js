@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Tab, Header, Grid } from 'semantic-ui-react'
+import { Segment, Tab, Header } from 'semantic-ui-react'
 import ProjectGrid from './components/ProjectGrid';
 
 const panes = [
@@ -15,14 +15,12 @@ class Projects extends Component {
 
   render() {
     return (
-      <Grid centered>
-        <Grid.Column width={15}>
+      
         <Segment className='projects' style={{backgroundColor:'#0f1420'}}>
           <Header color='purple'><h1 class='ui violet inverted header'>Projects</h1></Header>
             <Tab panes={panes} onTabChange={this.handleChange} />
         </Segment>
-        </Grid.Column>
-      </Grid>
+
     )
   }
 }

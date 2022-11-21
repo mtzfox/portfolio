@@ -26,16 +26,15 @@ const ProjectGrid = () => (
                 <Image verticalAlign='middle' style={{border:"1px solid #A087C0"}} src={cryptoImg} as='a' centered href='https://mtzfox.github.io/crypto-coin-app/' target='_blank' />
             </Grid.Column>
             <Grid.Column width={9}>
-                <h3>{project.name}</h3>
+                <h2>{project.name}</h2>
                 <p>{project.description}</p>
-                <h4>What I used:</h4>
+                <h3>Built with:</h3>
                 <ul>
                     <li>Vite</li> 
-                    <li>Pico.css,</li> 
+                    <li>Pico.css</li> 
                     <li>SCSS</li> 
                     <li>Axios</li>
-                    <li>Coinstats</li>
-                    <li>API</li>
+                    <li>Coinstats API</li>
                 </ul>
             </Grid.Column>
         </Grid>
