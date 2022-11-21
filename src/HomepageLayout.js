@@ -18,9 +18,6 @@ const HomepageLayout = () => (
       html, body {
         background-color: #252839;
       }
-      h1 {
-        font-s
-      }
       p {
         align-content: center;
         color: #c0cdf3;
@@ -172,11 +169,13 @@ const HomepageLayout = () => (
     </Grid>
   </Segment>
 
+  <Segment style={{backgroundColor:'#0f1420'}} inverted>
+    <Projects />
+  </Segment>
+  
 
-  <Projects />
 
-
-  <Segment inverted vertical centered style={{ padding: '5em 0em' }}>
+  <Segment inverted vertical centered style={{ padding: '0em 0em' }}>
       <Container>
         <Grid inverted textAlign='center'>
           <Grid.Row>

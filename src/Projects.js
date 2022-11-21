@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Segment, Tab } from 'semantic-ui-react'
+import { Segment, Tab, Header, Grid } from 'semantic-ui-react'
 import ProjectGrid from './components/ProjectGrid';
 
 const panes = [
-  { menuItem: 'Tab 1', render: () => <Tab.Pane><ProjectGrid /></Tab.Pane> },
-  { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-  { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+  { menuItem: 'Crypto Coin List', render: () => <Tab.Pane><ProjectGrid /></Tab.Pane> },
+  // { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
+  // { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
 ]
 
 class Projects extends Component {
@@ -15,9 +15,14 @@ class Projects extends Component {
 
   render() {
     return (
-      <Segment>
-        <Tab panes={panes} onTabChange={this.handleChange} />
-      </Segment>
+      <Grid centered>
+        <Grid.Column width={15}>
+        <Segment className='projects' style={{backgroundColor:'#0f1420'}}>
+          <Header color='purple'><h1 class='ui violet inverted header'>Projects</h1></Header>
+            <Tab panes={panes} onTabChange={this.handleChange} />
+        </Segment>
+        </Grid.Column>
+      </Grid>
     )
   }
 }

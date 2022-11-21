@@ -56,6 +56,7 @@
 }
 
 body {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   background-color: var(--space-cadet);
 }
 .container {
@@ -80,13 +81,27 @@ body {
   color: var(--royal-purple);
 }
 
-.projects {
+
+/* Projects */
+.projects .ui.attached.segment, .projects .ui.tabular.menu, .projects .ui.tabular.menu .active.item {
+  border-color: var(--english-violet);
+}
+
+.projects .ui.segment, .projects .ui.tabular.menu .active.item {
   background-color: var(--raisin-black);
   color: var(--silver-metallic);
 }
+.projects.ui.segment {
+  border-color: none;
+}
+
+.projects .ui ul li, .projects p {
+  color: var(--provincial-pink);
+  font-size: 14px;
+}
 
 
-/* h1 {
+h1 {
   color: var(--provincial-pink);
 }
 h3 {
@@ -96,7 +111,7 @@ h3 {
 h4 {
   color: var(--royal-purple);
 }
-
+/*
 
 
 .navbar-fixed nav {
