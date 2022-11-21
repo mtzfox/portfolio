@@ -1,37 +1,71 @@
-/* .App {
+/* html, body {
+  background-color: #252839;
+}
+h1 {
+  font-s
+}
+p {
+  align-content: center;
+  color: #c0cdf3;
+}
+a {
+  color: #82aaff;
+  font-weight: 600;
+}
+.about-me > h1 {
+  color: #A087C0;
+}
+div.about-me { 
+  margin: 0em; 
+  background-color: #252839;
+}
+div.about-text {
+  margin: 3rem 0;
+}
+.profile-image {
+  border: 3px solid #c0cdf3; 
+  position: absolute;
+  z-index: 1;
+  top: -4.5rem;
+}
+.profile-skills {
+  background-color: transparent;
+}
+.profile-skills .segments .segment {
+  background-color: #3a325577;
+}
+.profile-skills h3.ui.header {
+  margin-bottom: 0;
+}
+.profile-skills .list.skill-list {
+  margin: 0.25rem 0 0 0rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-skills .skill-list > .item {
+  display: inline-block;
+  list-style: none;
+  line-height: 1.3;
+}
+ul.ui.horizontal.bulleted.list li::before, 
+.ui.horizontal.bulleted.list > .item::before {
+  color: #A087C0;
+}
+.about-text p {
+  font-size: 1.2em;
+  font-weight: 600;
+  word-break: unset;
+  hyphens: none;
+}
+.about-me > div {
+  background-color: #0f1420;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.segment.about-me {
+  padding: 0rem;
+  margin: 8vw;
+  background-color: #252839;
 }
-
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.segment p {
+  font-size: 1.3em;
 } */

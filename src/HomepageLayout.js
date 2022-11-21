@@ -5,6 +5,7 @@ import {
 } from 'semantic-ui-react'
 
 import ResponsiveContainer from './ResponsiveContainer'
+import Projects from './Projects';
 
 const handleClick = (url) => {
   window.open(url);
@@ -16,9 +17,6 @@ const HomepageLayout = () => (
       {`
       html, body {
         background-color: #252839;
-      }
-      h1 {
-        font-s
       }
       p {
         align-content: center;
@@ -89,6 +87,8 @@ const HomepageLayout = () => (
     `}
     </style>
 
+
+  
 
   <Segment className="about-me">
     <Grid style={{ borderRadius: 5 }} container columns={2} inverted stackable>
@@ -169,8 +169,16 @@ const HomepageLayout = () => (
     </Grid>
   </Segment>
 
+  <Segment style={{backgroundColor:'#0f1420'}} inverted>
+    <Grid style={{ borderRadius: 5 }} centered>
+      <Grid.Column width={12} mobile={16} tablet={10} computer={10}>
+          <Projects />
+      </Grid.Column>
+    </Grid>
+  </Segment>
 
-  <Segment inverted vertical centered style={{ padding: '5em 0em' }}>
+
+  <Segment inverted vertical centered style={{ padding: '0em 0em' }}>
       <Container>
         <Grid inverted textAlign='center'>
           <Grid.Row>
