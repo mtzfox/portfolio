@@ -88,6 +88,10 @@ body {
   border-color: var(--english-violet);
 }
 
+.projects .ui.tabular.menu .item, .projects .ui.tabular.menu .item:hover {
+  color: var(--spun-pearl);
+}
+
 .projects .ui.segment, .projects .ui.tabular.menu .active.item {
   background-color: var(--raisin-black);
   color: var(--silver-metallic);
@@ -106,7 +110,7 @@ body {
 h1 {
   color: var(--provincial-pink);
 }
-h2 {
+h2, .projects h2.ui.header {
   color: var(--magenta-crayola);
 }
 h3 {
