@@ -16,6 +16,7 @@ const projectList = [
     description:
       "This is a simple web app for displaying current information about top crypto coins.",
     image: "./assets/images/crypto-app.png",
+    url: "https://mtzfox.github.io/crypto-coin-app/",
     slug: "crypto-coin-list",
     tools: ["Vite", "Pico.css", "SCSS", "Axios", "Coinstats API"]
   },
@@ -26,6 +27,7 @@ const projectList = [
     description:
       "This is a widget for selecting a star rating, with added form for submitting a review.",
     image: "./assets/images/star-rating-widget.png",
+    url: "https://codesandbox.io/s/star-rating-widget-n6vjuk",
     slug: "star-rating-widget",
     tools: ["Vanilla JavaScript", "CSS", "HTML", "Font Awesome"]
   }
@@ -57,12 +59,12 @@ export default class Projects extends Component {
           <Segment attached="bottom">
             <Container id={activeItem.id}>
               <Grid>
-                <Grid.Column width={7}>
-                  <Image src={activeItem.url} bordered />
+                <Grid.Column width={7} verticalAlign="middle">
+                  <Image src={activeItem.image} bordered verticalAlign="middle" as="a" href={activeItem.url} target="_blank" />
                 </Grid.Column>
                 <Grid.Column width={9}>
                   <Container>
-                    <Header as="h2">{activeItem.name}</Header>
+                    <Header as="h2">{activeItem.title}</Header>
                     <p>{activeItem.description}</p>
                     <ul>
                       {activeItem.tools.map((tool, i) => (
