@@ -10,18 +10,7 @@ import {
 
 const projectList = [
   {
-    id: 0,
-    name: "crypto coin list",
-    title: "Crypto Tracker",
-    description:
-      "This is a simple web app for displaying current information about top crypto coins.",
-    image: "./assets/images/crypto-app.png",
-    url: "https://mtzfox.github.io/crypto-coin-app/",
-    slug: "crypto-coin-list",
-    tools: ["Vite", "Pico.css", "SCSS", "Axios", "Coinstats API"]
-  },
-  {
-    id: 2,
+    id: 1,
     name: "breaking news search",
     title: "Breaking News Search",
     description:
@@ -30,6 +19,17 @@ const projectList = [
     url: "https://mtzfox.github.io/breaking-news-app/",
     slug: "breaking-news-search",
     tools: ["React", "CSS", "Vite.js", "semantic UI", "async/await fetch", "rapid API"]
+  },
+  {
+    id: 2,
+    name: "crypto coin list",
+    title: "Crypto Tracker",
+    description:
+      "This is a simple web app for displaying current information about top crypto coins.",
+    image: "./assets/images/crypto-app.png",
+    url: "https://mtzfox.github.io/crypto-coin-app/",
+    slug: "crypto-coin-list",
+    tools: ["Vite", "Pico.css", "SCSS", "Axios", "Coinstats API"]
   },
   {
     id: 3,
