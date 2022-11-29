@@ -169,10 +169,10 @@ const HomepageLayout = () => (
     </Grid>
   </Segment>
 
-  <Segment style={{backgroundColor:'#0f1420'}} inverted className="projects">
+  <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects">
     <Grid style={{ borderRadius: 5 }} centered>
-      <Grid.Column width={12} mobile={16} tablet={10} computer={12}>
-          <Projects />
+      <Grid.Column mobile={14} tablet={14} computer={13} centered>
+          <Projects centered />
       </Grid.Column>
     </Grid>
   </Segment>

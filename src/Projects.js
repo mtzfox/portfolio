@@ -69,11 +69,11 @@ export default class Projects extends Component {
           </Menu>
           <Segment attached="bottom">
             <Container id={activeItem.id}>
-              <Grid>
-                <Grid.Column width={7} verticalAlign="middle">
-                  <Image src={activeItem.image} bordered verticalAlign="middle" as="a" href={activeItem.url} target="_blank" />
+              <Grid style={{minHeight:"400px"}}>
+                <Grid.Column width={7} computer={7} tablet={8} mobile={16} verticalAlign="middle" style={{padding:"auto"}}>
+                  <Image src={activeItem.image} bordered size="large" verticalAlign="middle" as="a" href={activeItem.url} target="_blank" />
                 </Grid.Column>
-                <Grid.Column width={9}>
+                <Grid.Column width={7} computer={8} tablet={8} mobile={16} verticalAlign='middle'>
                   <Container>
                     <Header as="h2">{activeItem.title}</Header>
                     <p>{activeItem.description}</p>
