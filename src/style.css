@@ -81,6 +81,9 @@ body {
   /* font-family: 'Open Sans', sans-serf; */
   color: var(--royal-purple);
 }
+.segment.about-me {
+  background-color: var(--black-pearl);
+}
 
 
 /* Projects */

@@ -21,7 +21,18 @@ const projectList = [
     tools: ["Vite", "Pico.css", "SCSS", "Axios", "Coinstats API"]
   },
   {
-    id: 1,
+    id: 2,
+    name: "breaking news search",
+    title: "Breaking News Search",
+    description:
+      "This is React app that returns API news results after form submit. Includes pagination to load more results.",
+    image: "./assets/images/breaking-news-app.png",
+    url: "https://mtzfox.github.io/breaking-news-app/",
+    slug: "breaking-news-search",
+    tools: ["React", "CSS", "Vite.js", "semantic UI", "async/await fetch", "rapid API"]
+  },
+  {
+    id: 3,
     name: "star rating widget",
     title: "Star Rating Widget",
     description:
