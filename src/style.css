@@ -89,6 +89,7 @@ body {
 /* Projects */
 .projects .ui.attached.segment, .projects .ui.tabular.menu, .projects .ui.tabular.menu .active.item {
   border-color: var(--english-violet);
+  font-size: 1em;
 }
 
 .projects .ui.tabular.menu .item, .projects .ui.tabular.menu .item:hover {

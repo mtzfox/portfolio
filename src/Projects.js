@@ -12,7 +12,7 @@ const projectList = [
   {
     id: 0,
     name: "crypto coin list",
-    title: "Crypto Coin List",
+    title: "Crypto Tracker",
     description:
       "This is a simple web app for displaying current information about top crypto coins.",
     image: "./assets/images/crypto-app.png",

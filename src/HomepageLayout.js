@@ -184,7 +184,7 @@ const HomepageLayout = () => (
           <Grid.Row>
             <Grid.Column width={12}>
               <Header as='h4' inverted>
-              Ⓒ Copyright 2022 Mike Carlson. All rights reserved. 
+              Ⓒ Copyright 2022 Mike Carlson. 
               </Header>
             </Grid.Column>
           </Grid.Row>
