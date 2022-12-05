@@ -6,6 +6,7 @@ import {
 
 import ResponsiveContainer from './ResponsiveContainer'
 import Projects from './Projects';
+import ProjectMenu from './Projects2';
 
 const handleClick = (url) => {
   window.open(url);
@@ -172,7 +173,9 @@ const HomepageLayout = () => (
   <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects">
     <Grid style={{ borderRadius: 5 }} centered>
       <Grid.Column mobile={14} tablet={14} computer={13} centered>
-          <Projects centered />
+          {/* <Projects centered /> */}
+
+          <ProjectMenu centered />
       </Grid.Column>
     </Grid>
   </Segment>
