@@ -5,8 +5,8 @@ import {
 } from 'semantic-ui-react'
 
 import ResponsiveContainer from './ResponsiveContainer'
-import Projects from './Projects';
-import ProjectMenu from './Projects2';
+
+import ProjectList from './Projects2';
 
 const handleClick = (url) => {
   window.open(url);
@@ -175,7 +175,7 @@ const HomepageLayout = () => (
       <Grid.Column mobile={14} tablet={14} computer={13} centered>
           {/* <Projects centered /> */}
 
-          <ProjectMenu centered />
+          <ProjectList centered />
       </Grid.Column>
     </Grid>
   </Segment>

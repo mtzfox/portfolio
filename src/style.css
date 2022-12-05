@@ -95,10 +95,15 @@ body {
 .projects .ui.tabular.menu .item, .projects .ui.tabular.menu .item:hover {
   color: var(--spun-pearl);
 }
+.ui.segment[class*="bottom attached"]{
+  border-radius: 7px !important;
+  border-color: var(--english-violet) !important;
+}
 
 .projects .ui.segment, .projects .ui.tabular.menu .active.item {
   background-color: var(--raisin-black);
   color: var(--silver-metallic);
+  border-radius: 5px;
 }
 .projects.ui.segment {
   border: none;
