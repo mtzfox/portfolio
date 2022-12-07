@@ -4,9 +4,9 @@ import {
   Menu,
   Segment,
   Image,
-  Container,
-  Header
+  Divider,
 } from "semantic-ui-react";
+import './style.css';
 
 const projectList = [
   {
@@ -92,52 +92,92 @@ export default class ProjectList extends Component {
     const { activeItem } = this.state;
 
     return (
-      <div>
-        <>
+
 
         
          
       
+      <>
+      <Segment inverted attached="bottom" mobile={14}>
+        
+        <Grid padded>
+        
+        <Grid.Row only="mobile" verticalAlign='middle'>
+          
+          <Grid.Column mobile={16}>
+            
+            <Menu inverted defaultActiveIndex={1} size="huge" secondary stackable>
 
-      <Segment inverted attached="bottom">
-        <Menu inverted attached top tabular pointing secondary>
-            {projectList.map((item) => (
-              <Menu.Item
-                key={item.id}
-                item={item}
-                name={item.name}
-                content={item.title}
-                active={activeItem.id === item.id}
-                onClick={this.handleItemClick}
-              ></Menu.Item>
-            ))}
-          </Menu>
-    
-      
-            <Container id={activeItem.id}>
-              <Grid style={{minHeight:"400px"}}>
-                <Grid.Column width={7} computer={7} tablet={8} mobile={16} verticalAlign="middle" style={{padding:"auto"}}>
-                  <Image src={activeItem.image} bordered size="large" verticalAlign="middle" as="a" href={activeItem.url} target="_blank" />
-                </Grid.Column>
-                <Grid.Column width={7} computer={8} tablet={8} mobile={16} verticalAlign='middle'>
-                  <Container>
-                    <Header as="h2">{activeItem.title}</Header>
-                    <p>{activeItem.description}</p>
-                    <ul>
-                      {activeItem.tools.map((tool, i) => (
-                        <li key={tool[i]}>{tool}</li>
-                      ))}
-                    </ul>
-                  </Container>
-                </Grid.Column>
-              </Grid>
-            </Container>
-          </Segment>
-        </>
+                  {projectList.map((item) => (
+                    <Menu.Item
+                    key={item.id}
+                    item={item}
+                    name={item.name}
+                    content={item.title}
+                    active={activeItem.id === item.id}
+                    onClick={this.handleItemClick}
+                  ></Menu.Item>
+                    ))}
+               
+                
+            </Menu>
+          </Grid.Column>
+          </Grid.Row>
+          <Grid.Row only="tablet computer desktop">
+            <Grid.Column>
+
+              <Menu style={{fontSize: "1.3rem"}} inverted attached top tabular pointing secondary fluid widths={(projectList.length) + 1} padded stackable>
+
+                  
+                  {projectList.map((item) => (
+                    <Menu.Item
+                      key={item.id}
+                      item={item}
+                      name={item.name}
+                      content={item.title}
+                      active={activeItem.id === item.id}
+                      onClick={this.handleItemClick}
+                    ></Menu.Item>
+                  ))}
+
+              </Menu> 
+            </Grid.Column>  
+          
+        </Grid.Row>
+        <Divider />
+        </Grid>
+        <Grid style={{minHeight:"300px"}} padded>
+            {/* <Grid.Row style={{padding:"2em 2em"}}>
+              <Grid.Column width={12}>
+                <Header as="h2">{activeItem.title}</Header>
+              </Grid.Column>
+            </Grid.Row> */}
+            
+            <Grid.Row style={{padding:"2em 0 0"}}>
+              
+              <Grid.Column computer={6} tablet={4} mobile={16} style={{margin:"0px auto", padding: "0em 2em 1em", textAlign:"center"}} verticalAlign="middle">
+                <Image style={{margin:"auto 0"}} rounded src={activeItem.image} bordered size="medium" verticalAlign="middle" as="a" href={activeItem.url} target="_blank" />
+              </Grid.Column>
+              <Grid.Column computer={10} tablet={10} mobile={14} verticalAlign='middle' style={{margin:"0px auto", padding: "0em 1em 1em 0"}}>
+                <Segment raised >
+                  <p>{activeItem.description}</p>
+                  <ul>
+                    {activeItem.tools.map((tool, i) => (
+                      <li key={tool[i]}>{tool}</li>
+                    ))}
+                  </ul>
+                </Segment>
+              </Grid.Column>
+              
+            </Grid.Row>
+          
+          
+        </Grid>
+        
+      </Segment>
   
-      </div>
-      
-      );
+      </>    
+    );
     }
   }
                   

@@ -1,4 +1,5 @@
 :root {
+
   /* CSS HEX */
 --dark-sky-blue: #7EC1DEff;
 --space-cadet: #36304Bff;
@@ -85,8 +86,16 @@ body {
   background-color: var(--black-pearl);
 }
 
-
 /* Projects */
+@media screen and (min-width: var(--mobile-max)) {
+  .mobile-visible {
+    display: none;
+  }
+  .desktop-visible {
+    display: block;
+  }
+}
+
 .projects .ui.attached.segment, .projects .ui.tabular.menu, .projects .ui.tabular.menu .active.item {
   border-color: var(--english-violet);
   font-size: 1em;
@@ -108,6 +117,49 @@ body {
 .projects.ui.segment {
   border: none;
   box-shadow: none;
+}
+.projects .ui.secondary.inverted.menu .active.item, 
+.ui.inverted.menu .item::before {
+  background: rgba(255,255,255,.08);
+}
+
+.ui.stackable.menu .item::before {
+  position: absolute;
+  content: '';
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(34,36,38,.1);
+}
+.ui.secondary.menu .item::before {
+  display: none !important;
+}
+.ui.menu .item::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(34,36,38,.1);
+}
+::selection {
+  background-color: #cce2ff;
+  color: rgba(0,0,0,.87);
+}
+
+/* .projects .ui.secondary.inverted.menu a.item {
+  color: 
+} */
+.projects .ui.secondary.inverted.pointing.menu .active.item {
+  color: #a291fb !important;
+  border-color: #a291fb !important;
+  background-color: transparent;
+}
+.projects .ui.secondary.inverted.menu .active.item {
+  color: #a291fb !important;
 }
 
 .projects ul li, .projects p {

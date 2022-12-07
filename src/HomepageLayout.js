@@ -1,4 +1,3 @@
-
 import React from 'react'
 import {
   Container, Segment, Grid, Image, Header, Icon, List
@@ -170,12 +169,16 @@ const HomepageLayout = () => (
     </Grid>
   </Segment>
 
-  <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects">
+  
+  <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects" centered>
+    <Container textAlign='center' style={{ padding: "1rem", marginBottom:"1rem" }}>
+      <Header as='h1' inverted  color='purple' style={{ fontSize:'3em' }}>Projects</Header>
+    </Container>
     <Grid style={{ borderRadius: 5 }} centered>
-      <Grid.Column mobile={14} tablet={14} computer={13} centered>
+      <Grid.Column mobile={15} tablet={14} computer={12}>
           {/* <Projects centered /> */}
 
-          <ProjectList centered />
+          <ProjectList />
       </Grid.Column>
     </Grid>
   </Segment>
