@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {
+  Button,
   Grid,
+  Icon,
   Menu,
   Segment,
   Image,
@@ -19,7 +21,7 @@ export default class ProjectList extends Component {
 
     return (
     <>
-      <Segment inverted attached="bottom" mobile={14}>
+      <Segment attached="bottom" mobile={14} className="project-grid">
         <Grid padded>
           <Grid.Row only="mobile" verticalAlign='middle'>
             <Grid.Column mobile={16}>
@@ -43,9 +45,7 @@ export default class ProjectList extends Component {
           <Grid.Row only="tablet computer desktop">
             <Grid.Column>
 
-              <Menu style={{fontSize: "1.3rem"}} inverted attached top tabular pointing secondary fluid widths={(projectList.length) + 1} padded stackable>
-
-                  
+              <Menu inverted attached top tabular pointing secondary className="project-menu" stackable>
                   {projectList.map((item) => (
                     <Menu.Item
                       key={item.id}
@@ -65,19 +65,37 @@ export default class ProjectList extends Component {
         </Grid>
 
         <Grid style={{minHeight:"300px"}} padded>
-          <Grid.Row style={{padding:"2em 0 0"}}>
+          <Grid.Row className="project-row">
             
-            <Grid.Column computer={6} tablet={4} mobile={16} style={{margin:"0px auto", padding: "0em 2em 1em", textAlign:"center"}} verticalAlign="middle">
-              <Image style={{margin:"auto 0"}} rounded src={activeItem.image} bordered size="medium" verticalAlign="middle" as="a" href={activeItem.url} target="_blank" />
+            <Grid.Column widescreen={8} computer={8} tablet={8} mobile={16} className="project-image" verticalAlign="middle">
+              <Image style={{margin:"auto 0"}} rounded src={activeItem.image} bordered size="large" as="a" href={activeItem.liveUrl} target="_blank" />
             </Grid.Column>
-            <Grid.Column computer={10} tablet={10} mobile={14} verticalAlign='middle' style={{margin:"0px auto", padding: "0em 1em 1em 0"}}>
-              <Segment raised >
-                <p>{activeItem.description}</p>
-                <ul>
+            <Grid.Column widescreen={8} computer={8} tablet={8} mobile={14} className="project-info" verticalAlign='middle'>
+              <Segment raised style={{minHeight:'326px'}}>
+                <h2>{activeItem.title}</h2>
+                <p className="description">{activeItem.description}</p>
+                <div className="tag-container">
                   {activeItem.tools.map((tool, i) => (
-                    <li key={tool[i]}>{tool}</li>
+                    <span className="tags" key={tool[i]}>{tool}</span>
                   ))}
-                </ul>
+                </div>
+                <div className="links">
+                  <Button animated inverted color='violet' as='a' href={activeItem.liveUrl} target='_blank'>
+                    <Button.Content visible>Live Site</Button.Content>
+                    <Button.Content hidden>
+                      <Icon name='arrow right' />
+                    </Button.Content>
+                  </Button>
+                  {activeItem.gitUrl !== "null" && (
+                  <Button animated inverted color='purple' as='a' href={activeItem.gitUrl} target='_blank'>
+          
+                    <Button.Content visible>Github Repository</Button.Content>
+                    <Button.Content hidden>
+                      <Icon name='arrow right' />
+                    </Button.Content>
+                  </Button>
+                  )}
+                </div>
               </Segment>
             </Grid.Column>
           </Grid.Row>
