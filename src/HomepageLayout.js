@@ -175,7 +175,7 @@ const HomepageLayout = () => (
       <Header as='h1' inverted  color='purple' style={{ fontSize:'3em' }}>Projects</Header>
     </Container>
     <Grid style={{ borderRadius: 5 }} centered>
-      <Grid.Column mobile={15} tablet={14} computer={12}>
+      <Grid.Column mobile={15} tablet={14} computer={12} widescreen={8}>
           {/* <Projects centered /> */}
 
           <ProjectList />

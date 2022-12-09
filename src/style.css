@@ -1,5 +1,19 @@
 :root {
 
+--mobile-min: 0px;
+--mobile-max: 480px;
+
+--tablet-min: 481px;
+--tablet-max: 768px;
+
+--desktop-min: 769px;
+--desktop-max: 1024px;
+
+--large-screen-min: 1025px;
+--large-screen-max: 1200px;
+
+
+
 --primary-light: var(--provincial-pink);
 --text-dark: var(--space-cadet);
 
@@ -61,6 +75,29 @@
   --raisin-black: #1f2330ff;
 }
 
+/* Media Queries */
+@media screen and (min-width: var(--mobile-max)) {
+  .mobile-visible {
+    display: none;
+  }
+  .desktop-visible {
+    display: block;
+  }
+}
+@media screen and (min-width: var(--tablet-min)) {
+  .project-info > .ui.segment, .projects .ui.tabular.menu .active.item {
+    background: var(--raisin-black);
+  }
+}
+@media screen and (max-width: var(--mobile-max)) {
+  .project-info > .ui.segment, .projects .ui.tabular.menu .active.item {
+      background: transparent;
+  }
+}
+
+
+
+
 h1 {
   color: var(--provincial-pink);
 }
@@ -107,15 +144,7 @@ body {
   background-color: var(--black-pearl);
 }
 
-/* Projects */
-@media screen and (min-width: var(--mobile-max)) {
-  .mobile-visible {
-    display: none;
-  }
-  .desktop-visible {
-    display: block;
-  }
-}
+
 
 .projects .ui.attached.segment, .projects .ui.tabular.menu, .projects .ui.tabular.menu .active.item {
   border-color: var(--english-violet);
@@ -127,7 +156,7 @@ body {
 }
 
 .projects .ui.segment, .projects .ui.tabular.menu .active.item {
-  background-color: var(--raisin-black);
+  background: transparent;
   color: var(--silver-metallic);
   border-radius: 5px;
 }
@@ -184,7 +213,17 @@ body {
   flex-wrap: wrap;
   justify-content:space-around;
 }
+
+/* This is to fix the space between items in the project menu */
+/* may need to be adjusted with max-width: calc() something later */
+/* the semantic ui max width is max-width: calc(100% - (-1px * 2)); */
+.ui.attached.tabular.menu.project-menu {
+  width: 100%;
+  margin: 0 auto;
+  max-width: fit-content;
+}
 .projects .ui.secondary.pointing.menu .item {
+  margin: 0em 1em;
   padding: 1em 0.5em;
   background-color: transparent;
   font-size: 1.3rem;
