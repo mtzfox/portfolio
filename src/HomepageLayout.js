@@ -7,6 +7,8 @@ import ResponsiveContainer from './ResponsiveContainer'
 
 import ProjectList from './Projects2';
 
+import Gallery from './components/Gallery.js';
+
 const handleClick = (url) => {
   window.open(url);
 };
@@ -182,7 +184,6 @@ const HomepageLayout = () => (
       </Grid.Column>
     </Grid>
   </Segment>
-
 
   <Segment inverted vertical centered style={{ padding: '0em 0em' }}>
       <Container>
