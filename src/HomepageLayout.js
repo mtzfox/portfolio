@@ -7,7 +7,7 @@ import ResponsiveContainer from './ResponsiveContainer'
 
 import ProjectList from './Projects2';
 
-import Gallery from './components/Gallery.js';
+// import Gallery from './components/Gallery.js';
 
 const handleClick = (url) => {
   window.open(url);
