@@ -9,7 +9,7 @@ package = "netlify-plugin-is-website-vulnerable"
 
 [[redirects]]
   from = "https://blog.mikecarlson.io/*"
-  to = "https://mtzfox.blot.im/*"
+  to = "https://mtzfox.blot.im/"
   status = 200
   force = true
 
