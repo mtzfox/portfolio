@@ -13,6 +13,11 @@ package = "netlify-plugin-is-website-vulnerable"
   status = 200
 
 [[redirects]]
+  from = "https://obsidian.mikecarlson.io/blog/*"  
+  to = "https://blog.mikecarlson.io/:splat/"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
