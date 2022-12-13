@@ -8,20 +8,8 @@ package = "netlify-plugin-is-website-vulnerable"
   force = true
 
 [[redirects]]
-  from = "https://mtzfox.blot.im/*"
-  to = "https://obsidian.mikecarlson.io/blog/:splat/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "https://blog.mikecarlson.io/*"
-  to = "https://mtzfox.blot.im/"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "https://obsidian.mikecarlson.io/blog/*"
-  to = "https://publish.obsidian.md/serve?url=obsidian.mikecarlson.io/blog/:splat/"
+  to = "https://blog.mikecarlson.io/:splat/"
   status = 200
   force = true
 
