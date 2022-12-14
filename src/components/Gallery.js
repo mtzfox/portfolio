@@ -34,7 +34,7 @@ export default function Gallery() {
           </Segment>
 
           <Segment inverted secondary style={{ textAlign: "center" }}>
-            <GalleryNav props={handleItemClick} />
+            {/* <GalleryNav /> */}
           </Segment>
           <Segment inverted tertiary>
       
