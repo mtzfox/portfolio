@@ -7,22 +7,11 @@ import galleryItems from "./galleryItems";
 export default function Gallery() {
   const [state,setState] = useState({ activeItem:'component' });
   
-
-  // Latest attempt - doesn't work but seems closer
-  const handleItemClick = () => {
-    setState({ activeItem: 'component'  });
-    const category = () => galleryItems.filter(item =>
-      item.type === state.activeItem);
-    console.log(category);
-    {category.map((items => {
-      return (
-        <List className="card-grid">
-          <GalleryItem key={items.id} {...items} />
-        </List>
-      );
-    }))  
-  };
+  const handleItemClick = (e, { slug }) => setState({ activeItem: slug });
   
+  const category = galleryItems.filter(item =>
+    item.type === state.activeItem
+  );
    
   
 
@@ -45,19 +34,18 @@ export default function Gallery() {
           </Segment>
 
           <Segment inverted secondary style={{ textAlign: "center" }}>
-            <GalleryNav onClick={handleItemClick} />
-            
+            <GalleryNav props={handleItemClick} />
           </Segment>
           <Segment inverted tertiary>
       
             <Card.Group className="card-grid">
               <List className="card-grid">
+                {category.map(({...props}) => {
+                  <GalleryItem key={props.id} {...props} />
+                })}
                 {category.map(({...props}) => (
                   <GalleryItem key={props.id} {...props} />
                 ))}
-                {/* {category.map(({...props}) => (
-                  <GalleryItem key={props.id} {...props} />
-                ))} */}
                 
               {/* <CardItem {state.activeItem} /> */}
               </List>
