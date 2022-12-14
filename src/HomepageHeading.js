@@ -39,7 +39,7 @@ const HomepageHeading = ({ mobile }) => (
           marginTop: mobile ? '0.5em' : '0.5em',
         }}
       />
-      <Divider placeholder />
+      <Divider />
 
       <Segment color='black' inverted>
       

@@ -1,52 +1,72 @@
-import React from "react";
-import {
-  Segment,
-  Container,
-  Card,
-  Grid,
-  Header,
-  Pagination
-} from "semantic-ui-react";
+import React, {useState} from "react";
+import { Segment, Header, Card, List } from "semantic-ui-react";
 import GalleryItem from "./GalleryItem";
 import GalleryNav from "./GalleryNav";
 import galleryItems from "./galleryItems";
 
 export default function Gallery() {
-  return (
-    <div className="Gallery">
-      <Segment.Group>
-        <Segment>
-          <Container fluid textAlign="center">
-            <Header as="h1">Design examples</Header>
-          </Container>
-        </Segment>
-        <Container>
-          <GalleryNav />
-        </Container>
-        <Segment>
-          <Card.Group centered itemsPerRow={3} stackable>
-            {galleryItems.map(({ ...props }) => (
-              <GalleryItem key={props.id} {...props} />
-            ))}
-          </Card.Group>
-        </Segment>
-        <Segment as="div" padded>
-          <Grid columns="equal">
-            <Grid.Column></Grid.Column>
-            <Grid.Column width={6}>
-              <Pagination
-                defaultActivePage={1}
-                firstItem={null}
-                lastItem={null}
-                pointing
-                secondary
-                totalPages={3}
-              />
-            </Grid.Column>
-            <Grid.Column></Grid.Column>
-          </Grid>
-        </Segment>
-      </Segment.Group>
-    </div>
-  );
-}
+  const [state,setState] = useState({ activeItem:'component' });
+  
+
+  // Latest attempt - doesn't work but seems closer
+  const handleItemClick = () => {
+    setState({ activeItem: 'component'  });
+    const category = () => galleryItems.filter(item =>
+      item.type === state.activeItem);
+    console.log(category);
+    {category.map((items => {
+      return (
+        <List className="card-grid">
+          <GalleryItem key={items.id} {...items} />
+        </List>
+      );
+    }))  
+  };
+  
+   
+  
+
+    // function CardItem() {
+    //   return (
+    //     <List className="card-grid">
+    //     {galleryItems.filter(items => 
+    //       items.type === state.activeItem).map(({...props}) => (
+    //         <GalleryItem key={props.id} {...props} />
+    //       ))}
+    //     </List> 
+    //   )
+    // }
+      
+    return (
+      <div className="gallery">
+        <Segment.Group mobile={16} tablet={14} desktop={10} widescreen={10} >
+          <Segment inverted textAlign="center" secondary>
+            <Header as='h1' centered style={{ fontSize:'3em', color:'var(--ebony-clay)' }}>Work Examples</Header>
+          </Segment>
+
+          <Segment inverted secondary style={{ textAlign: "center" }}>
+            <GalleryNav onClick={handleItemClick} />
+            
+          </Segment>
+          <Segment inverted tertiary>
+      
+            <Card.Group className="card-grid">
+              <List className="card-grid">
+                {category.map(({...props}) => (
+                  <GalleryItem key={props.id} {...props} />
+                ))}
+                {/* {category.map(({...props}) => (
+                  <GalleryItem key={props.id} {...props} />
+                ))} */}
+                
+              {/* <CardItem {state.activeItem} /> */}
+              </List>
+            </Card.Group>
+         
+          </Segment>
+          <Segment inverted secondary padded></Segment>
+        </Segment.Group>
+      </div>
+    );
+  }
+

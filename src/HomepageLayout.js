@@ -7,7 +7,7 @@ import ResponsiveContainer from './ResponsiveContainer'
 
 import ProjectList from './Projects2';
 
-// import Gallery from './components/Gallery.js';
+import Gallery from './components/Gallery.js';
 
 const handleClick = (url) => {
   window.open(url);
@@ -172,20 +172,29 @@ const HomepageLayout = () => (
   </Segment>
 
   
-  <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects" centered>
+  <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects">
     <Container textAlign='center' style={{ padding: "1rem", marginBottom:"1rem" }}>
       <Header as='h1' inverted  color='purple' style={{ fontSize:'3em' }}>Projects</Header>
     </Container>
     <Grid style={{ borderRadius: 5 }} centered>
       <Grid.Column mobile={15} tablet={14} computer={12} widescreen={8}>
-          {/* <Projects centered /> */}
 
           <ProjectList />
       </Grid.Column>
     </Grid>
   </Segment>
 
-  <Segment inverted vertical centered style={{ padding: '0em 0em' }}>
+  <Segment style={{backgroundColor: 'var(--black-pearl), margin: 0.5em auto'}}>
+  
+  <Grid centered padded style={{padding: '0 1em'}}>
+    <Grid.Column mobile={16} tablet={14} computer={14} widescreen={14}>
+    
+      <Gallery />
+    </Grid.Column>
+  </Grid>
+  </Segment>
+
+  <Segment inverted vertical style={{ padding: '0em 0em' }}>
       <Container>
         <Grid inverted textAlign='center'>
           <Grid.Row>

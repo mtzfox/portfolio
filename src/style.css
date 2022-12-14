@@ -307,6 +307,44 @@ body {
   margin: 0 1rem 1rem 0;
 }
 
+/* Design Examples */
+
+
+.gallery .card-grid {
+  overflow: auto;
+  scrollbar-color: gray transparent;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-items: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .card-grid {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card-grid .list {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    align-self: center;
+  }
+  .card-grid .ui.horizontal.list {
+    display: inline-block;
+    font-size: 0;
+    width: 50%;
+    padding: 0 0.5rem;
+  }
+}
+
 
 
 

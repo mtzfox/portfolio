@@ -3,27 +3,31 @@ import { Menu } from "semantic-ui-react";
 
 export default class GalleryNav extends Component {
   state = { activeItem: "home" };
+  
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  handleItemClick = (e, { slug }) => this.setState({ activeItem: slug });
 
   render() {
     const { activeItem } = this.state;
 
     return (
-      <Menu compact text>
+      <Menu borderless compact inverted>
         <Menu.Item
           name="Layouts"
-          active={activeItem === "home"}
+          slug="layout"
+          active={activeItem === "layout"}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          name="Components"
+          slug="component"
+          active={activeItem === "components"}
           onClick={this.handleItemClick}
         />
         <Menu.Item
           name="Design"
-          active={activeItem === "messages"}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name="Misc Projects"
-          active={activeItem === "friends"}
+          slug="design"
+          active={activeItem === "design"}
           onClick={this.handleItemClick}
         />
       </Menu>
