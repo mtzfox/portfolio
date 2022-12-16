@@ -319,6 +319,12 @@ body {
   flex-wrap: nowrap;
   align-items: baseline;
   justify-items: space-around;
+  min-height: 225px;
+}
+/* Inner card grid */
+.ui.cards.card-grid {
+  min-height: 225px;
+  margin: 0.5em 0;
 }
 
 @media screen and (max-width: 768px) {

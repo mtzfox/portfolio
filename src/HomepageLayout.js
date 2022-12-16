@@ -186,8 +186,8 @@ const HomepageLayout = () => (
 
   <Segment style={{backgroundColor: 'var(--black-pearl), margin: 0.5em auto'}}>
   
-  <Grid centered padded style={{padding: '0 1em'}}>
-    <Grid.Column mobile={16} tablet={14} computer={14} widescreen={14}>
+  <Grid centered style={{margin: '1em auto'}}>
+    <Grid.Column mobile={16} tablet={14} computer={12} widescreen={12}>
     
       <Gallery />
     </Grid.Column>

@@ -55,7 +55,7 @@ export default function GalleryItem(props) {
         </Modal.Content>
 
         <Modal.Actions style={{ backgroundColor: "lightgray" }}>
-          <Button onClick={() => setOpen(false)} color='violet'>
+          <Button onClick={() => setOpen(false)} positive>
             Ok
           </Button>
         </Modal.Actions>
