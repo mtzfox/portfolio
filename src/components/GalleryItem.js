@@ -14,11 +14,6 @@ export default function GalleryItem(props) {
   return (
     <List horizontal>
       <Card
-        style={{
-          boxShadow: "2px 2px 5px 0px grey",
-          padding: "0.2rem",
-          margin: "1rem 0.5rem"
-        }}
         id={props.id}
         className="card"
         onClick={() => setOpen(true)}
@@ -40,13 +35,14 @@ export default function GalleryItem(props) {
         <Modal.Content>
           <Container>
             <Grid columns={2}>
-              <Grid.Column width={11}>
+              <Grid.Column tablet={11} computer={11} mobile={16}>
                 <Image fluid src={props.src} wrapped />
               </Grid.Column>
-              <Grid.Column width={5}>
+              <Grid.Column tablet={5} computer={5} mobile={16}>
                 <Modal.Description>
                   <Container className="project-description">
-                    {props.longDescription}
+                    <span>{props.description}</span>
+                    <span>{props.longDescription}</span>
                   </Container>
                 </Modal.Description>
               </Grid.Column>
@@ -55,7 +51,7 @@ export default function GalleryItem(props) {
         </Modal.Content>
 
         <Modal.Actions style={{ backgroundColor: "lightgray" }}>
-          <Button onClick={() => setOpen(false)} positive>
+          <Button color='violet' onClick={() => setOpen(false)}>
             Ok
           </Button>
         </Modal.Actions>

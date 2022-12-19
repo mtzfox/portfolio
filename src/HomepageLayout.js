@@ -172,8 +172,8 @@ const HomepageLayout = () => (
   </Segment>
 
   
-  <Segment style={{backgroundColor:'#0f1420', paddingBottom:"3rem"}} inverted className="projects">
-    <Container textAlign='center' style={{ padding: "1rem", marginBottom:"1rem" }}>
+  <Segment className="projects">
+    <Container textAlign='center'>
       <Header as='h1' inverted  color='purple' style={{ fontSize:'3em' }}>Projects</Header>
     </Container>
     <Grid style={{ borderRadius: 5 }} centered>
@@ -184,17 +184,19 @@ const HomepageLayout = () => (
     </Grid>
   </Segment>
 
-  <Segment style={{backgroundColor: 'var(--black-pearl), margin: 0.5em auto'}}>
-  
-  <Grid centered style={{margin: '1em auto'}}>
-    <Grid.Column mobile={16} tablet={14} computer={12} widescreen={12}>
+  <Segment className="gallery" padded textAlign="center">
+    <Container textAlign='center'>
+      <Header as="h1" color='white' inverted style={{ fontSize:'3em' }}>Design Examples</Header>
+    </Container>
+  <Grid centered>
+    <Grid.Column mobile={16} tablet={14} computer={12} widescreen={8}>
     
       <Gallery />
     </Grid.Column>
   </Grid>
   </Segment>
 
-  <Segment inverted vertical style={{ padding: '0em 0em' }}>
+  <Segment inverted vertical style={{ padding: '0em 0em', background: 'var(--space-cadet)' }}>
       <Container>
         <Grid inverted textAlign='center'>
           <Grid.Row>
