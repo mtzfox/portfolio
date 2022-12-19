@@ -157,8 +157,8 @@ body {
   padding: 2rem 0em 1rem;
 }
 .projects.ui.segment, .gallery.ui.segment {
-  padding: 1vh 0vh 0vh;
-  margin: 2vh auto;
+  margin: 1vh 0 1vh;
+  padding: 1vh 0 6vh;
 }
 
 
@@ -348,7 +348,7 @@ body {
 
 .ui.tertiary.inverted.segment.card-grid {
   background-color: var(--roman-silver);
-  
+  padding: 1rem 0;
 } 
 
 .card-grid .ui.card.card {
@@ -367,7 +367,10 @@ body {
   margin: auto; 
   align-items:baseline; 
   border-bottom:0px; 
-  
+}
+.gallery .ui.secondary.inverted.pointing.menu .active.item {
+  color: #54c8ff !important;
+  border-color: #54c8ff;
 }
 
 .description .project-description > span {
