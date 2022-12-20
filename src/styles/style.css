@@ -113,11 +113,65 @@ h4 {
   color: var(--royal-purple);
 }
 
+.about-me > h1 {
+  color: #A087C0;
+}
+.ui.segment.about-me {
+  padding: 0rem;
+  margin: 8vw;
+  background: #252839;
+}
+.segment .ui.horizontal.list > .item,
+.ui.segment, .ui.segments .segment p,
+.skill-list > .item:first-child,
+.skill-list > .item:last-child {
+  font-size: 1.2rem;
+}
+ul.ui.horizontal.bulleted.list li::before, 
+.ui.horizontal.bulleted.list > .item::before {
+  color: #A087C0;
+}
+.profile-skills {
+  background-color: transparent;
+}
+.profile-skills .segments .segment {
+  background-color: #3a325577;
+}
+.profile-skills h3.ui.header {
+  margin-bottom: 0;
+}
+.profile-skills .list.skill-list {
+  margin: 0.25rem 0 0 0rem;
+  text-align: center;
+}
+.profile-skills .skill-list > .item {
+  display: inline-block;
+  list-style: none;
+  line-height: 1.3;
+}
+.about-text {
+  margin: 3rem 0;
+}
+.about-me > div {
+  background-color: #0f1420;
+  padding: 0;
+}
+.segment .about-text p {
+  font-size: 1.1em;
+  font-weight: 600;
+  word-break: unset;
+  hyphens: none;
+}
+div.about-text {
+  margin: 3rem 0;
+}
+.segment.about-me strong {
+  color: var(--mauve);
+}
 
 body {
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  /* background-color: var(--space-cadet); */
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .container {
   align-items: center;
@@ -392,6 +446,7 @@ body {
 .gallery .ui.segments {
   border: 1px solid var(--roman-silver);
   background-color:#0f1420;
+  box-shadow: 4px 11px 16px -12px rgba(69, 69, 69, 0.75);
 }
 
 .gallery .menu {

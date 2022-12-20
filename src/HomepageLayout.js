@@ -5,7 +5,7 @@ import {
 
 import ResponsiveContainer from './ResponsiveContainer'
 
-import ProjectList from './Projects2';
+import ProjectList from './components/Projects';
 
 import Gallery from './components/Gallery.js';
 
@@ -28,63 +28,19 @@ const HomepageLayout = () => (
         color: #82aaff;
         font-weight: 600;
       }
-      .about-me > h1 {
-        color: #A087C0;
-      }
-      div.about-me { 
-        margin: 0em; 
-        background-color: #252839;
-      }
-      div.about-text {
-        margin: 3rem 0;
-      }
+      
       .profile-image {
         border: 3px solid #c0cdf3; 
         position: absolute;
         z-index: 1;
         top: -4.5rem;
       }
-      .profile-skills {
-        background-color: transparent;
-      }
-      .profile-skills .segments .segment {
-        background-color: #3a325577;
-      }
-      .profile-skills h3.ui.header {
-        margin-bottom: 0;
-      }
-      .profile-skills .list.skill-list {
-        margin: 0.25rem 0 0 0rem;
-        text-align: center;
-      }
-      .profile-skills .skill-list > .item {
-        display: inline-block;
-        list-style: none;
-        line-height: 1.3;
-      }
-      ul.ui.horizontal.bulleted.list li::before, 
-      .ui.horizontal.bulleted.list > .item::before {
-        color: #A087C0;
-      }
-      .about-text p {
-        font-size: 1.2em;
-        font-weight: 600;
-        word-break: unset;
-        hyphens: none;
-      }
-      .about-me > div {
-        background-color: #0f1420;
-        padding: 0;
-      }
       
-      .segment.about-me {
-        padding: 0rem;
-        margin: 8vw;
-        background-color: #252839;
-      }
-      .segment p {
-        font-size: 1.3em;
-      }
+      
+      
+      
+      
+      
 
     `}
     </style>
@@ -102,18 +58,27 @@ const HomepageLayout = () => (
           <Container fluid text textAlign='left' className='about-text' >
             <Header as='h1' inverted color='violet' style={{ fontSize:'3em' }}>About Me</Header>
             <p>
-              I'm a Seattle-based software engineer, specializing in front-end
-              web development.
+              I'm a Seattle-based software engineer, specializing in <strong>frontend
+              development</strong> and <strong>UI design</strong>, and developing fullstack chops.
             </p>
 
             <p>
-              My professional interests are in JavaScript, React, CSS and design
-              for layout, user interface, and branding for the web.
+              My focus is primarily in <strong>JavaScript/Typescript</strong>, <strong>React</strong>, 
+              &nbsp;<strong>CSS/Sass</strong>, <strong>Vue</strong> and associated libraries. 
+              I have a lot of experience with <strong>Semantic UI</strong> and 
+              &nbsp;<strong>Bootstrap</strong>, and I'm currently learning some new frameworks including 
+              &nbsp;<strong>Tailwind</strong>, <strong>Material UI</strong>, <strong>Styled Components</strong>, among others.
             </p>
-
+            <p>  
+              Most of my career thus far has been spent working in digital marketing
+              working in agency design for advertising, layout and user interface design, and 
+              building applications as part of ad tech platforms. 
+            </p>
             <p>
-              Trained in commercial design, most of my career has been spent in
-              digital marketing services for the automotive industry.
+              I've also been a freelance web designer, have SEO experience, 
+              I've ran a successful YouTube channel, and I regularly write as a part of 
+              my <a href="https://obsidian.mikecarlson.io" target="_blank" rel="noreferrer">Obsidian PKM</a>. 
+              I'm always looking for new opportunties to learn new technology and grow my skillset.
             </p>
           </Container>
         </Grid.Column>

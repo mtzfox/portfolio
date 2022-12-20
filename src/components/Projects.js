@@ -8,7 +8,7 @@ import {
   Image,
   Divider,
 } from "semantic-ui-react";
-import './style.css';
+import '../styles/style.css';
 import projectList from './projectsList';
 
 export default class ProjectList extends Component {
